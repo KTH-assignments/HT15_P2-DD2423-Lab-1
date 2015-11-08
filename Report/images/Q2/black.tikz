@@ -1,0 +1,24 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=3.566in,
+height=3.566in,
+at={(1.236in,0.481in)},
+scale only axis,
+axis on top,
+xmin=0.5,
+xmax=128.5,
+y dir=reverse,
+ymin=0.5,
+ymax=128.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=128.5,ymin=0.5,ymax=128.5] {black-1.png};
+\end{axis}
+\end{tikzpicture}%

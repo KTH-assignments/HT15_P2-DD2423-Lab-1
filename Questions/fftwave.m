@@ -31,7 +31,7 @@ else
 end
 
 % As noted in slide 22 of lecture 3
-wavelength = 2 * pi / sqrt(uc^2 + vc^2)
+wavelength = sz / sqrt(uc^2 + vc^2)
 
 % Since the Inverse FFT is implemented with a factor of 1 / N^2 in Matlab,
 % the amplitude will be 1 / sz^2
