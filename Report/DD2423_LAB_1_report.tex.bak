@@ -25,6 +25,19 @@
   
   		\end{itemize}
 
+	  	\begin{figure}[!htb]
+			\centering
+			\scalebox{0.7}{\input{./images/Q1/a.tex}}
+			\caption{$(p,q)=(5,9)$}
+			\label{fig:59}
+	  	\end{figure}
+	  	
+	  	\begin{figure}[!htb]
+			\centering
+			\scalebox{0.7}{\input{./images/Q1/b.tex}}
+			\caption{$(p,q)=(9,5)$}
+			\label{fig:95}
+	  	\end{figure}
 
   	\section{Question 2}
   
@@ -111,7 +124,7 @@
 	
 	\section{Question 6}
 	
-		The purpose of these lines is to correctly set the angular frequency values $\omega_x$ and $\omega_y$ inside the intervals
+		The purpose of these lines is to correctly map the angular frequency values $\omega_x$ and $\omega_y$ inside the interval
 		
 		\begin{equation}
 			-\frac{N}{2} \leq \omega_x, \omega_y \leq \frac{N}{2}
