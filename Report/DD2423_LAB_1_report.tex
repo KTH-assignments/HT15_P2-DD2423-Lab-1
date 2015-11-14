@@ -1,162 +1,25 @@
 \documentclass[12pt]{article}
+\usepackage{fontspec}
+\setmainfont{CMU Serif}
+\defaultfontfeatures{Ligatures=TeX} % To support LaTeX quoting style
 \usepackage{amsmath}
 \usepackage{lscape}
 \usepackage{graphicx}
-\usepackage{pgfplots} 
+\usepackage{pgfplots}
+\usepackage{subcaption}
+%\usepackage[margin=1in]{geometry}
+\usepackage{float}
 
 
-\title{DD$2423$ - Lab I}
+\title{DD$2423$ - Lab I \\ Alexandros Filotheou}
 \date{}
 
 \begin{document}
 	\maketitle
   
-  	\section{Question 1}
-  		What we see here is that:
-  
-  		\begin{itemize}
- 
-  		\item The further the non-zero point $(p,q)$ from the origin $O(0,0)$, the smaller the wavelength of the spatial image 
-  		(more dense lines in the real and imaginary part of the spatial image),
-  
-  		\item The amplitude of all the spatial images is the same,
-  
-  		\item The direction of the waveforms in the spatial images is dictated by the position of the non-zero point $(p,q)$ relative to the origin $O(0,0)$
-  
-  		\end{itemize}
-
-	  	\begin{figure}[!htb]
-			\centering
-			\scalebox{0.7}{\input{./images/Q1/a.tex}}
-			\caption{$(p,q)=(5,9)$}
-			\label{fig:59}
-	  	\end{figure}
-	  	
-	  	\begin{figure}[!htb]
-			\centering
-			\scalebox{0.7}{\input{./images/Q1/b.tex}}
-			\caption{$(p,q)=(9,5)$}
-			\label{fig:95}
-	  	\end{figure}
-
-	  	\begin{figure}[!htb]
-			\centering
-			\scalebox{0.7}{\input{./images/Q1/c.tex}}
-			\caption{$(p,q)=(17,9)$}
-			\label{fig:179}
-	  	\end{figure}
-	  	
-	  	\begin{figure}[!htb]
-			\centering
-			\scalebox{0.7}{\input{./images/Q1/d.tex}}
-			\caption{$(p,q)=(17,121)$}
-			\label{fig:17121}
-	  	\end{figure}
-	  	
-	  	\begin{figure}[!htb]
-			\centering
-			\scalebox{0.7}{\input{./images/Q1/e.tex}}
-			\caption{$(p,q)=(5,1)$}
-			\label{fig:51}
-	  	\end{figure}
-	  	
-	  	\begin{figure}[!htb]
-			\centering
-			\scalebox{0.7}{\input{./images/Q1/f.tex}}
-			\caption{$(p,q)=(125,1)$}
-			\label{fig:1251}
-	  	\end{figure}
-	  	
-	  	
-  	\section{Question 2}
-  
-  		We exploit equation $4.2-33$ from \cite{GZ}  
-  
-  		\begin{equation}
-  			\sum_{x=0}^{M-1}\sum_{y=0}^{N-1} s(x,y) \cdot A \delta(x-x_0, y-y_0) = A \cdot s(x_0, y_0)
-  		\end{equation}
-  
-  		knowing that the output Fourier transform is a delta function at $(p,q)$. Hence, for a quadratic image $M=N$ and in the spatial domain:
-  
-  		\begin{equation}
-  			f(x,y)= \frac{1}{N^2} \sum_{x=0}^{N-1}\sum_{y=0}^{N-1} \delta(u - p, v - q) \cdot e^{\dfrac{2 \pi i \cdot (xu + yv)}{N}} = 
-  			\frac{1}{N^2} \cdot e^{\dfrac{2 \pi i \cdot (px + qy)}{N}}
-  		\end{equation}
-  
-	  	Hence, 
-	  	\begin{equation}
-	  		f(x,y) = \frac{1}{N^2} \cdot (\cos(\dfrac{2 \pi \cdot (px + qy)}{N}) + i\sin(\dfrac{2 \pi \cdot (px + qy)}{N}))
-	  		\label{eq:q2:sin_form}
-	  	\end{equation}
-  
-  
-	  	\begin{figure}[!htb]
-			\centering
-			\scalebox{.5}{\input{./images/Q2/sine.tikz}}
-			\caption{}
-			\label{fig:}
-	  	\end{figure}
-
-	  	\begin{figure}[!htb]
-			\centering
-			\scalebox{.5}{\input{./images/Q2/black.tex}}
-			\caption{}
-			\label{fig:}
-	  	\end{figure}
-
-	\section{Question 3}
-
-		As can be seen in equation \ref{eq:q2:sin_form}, the amplitude of the waveform is
+	\input{./sections/01.part_1}
 	
-		\begin{equation}
-			A = \dfrac{1}{N^2}
-		\end{equation}
-	
-	\section{Question 4}
-	
-		As seen in the lecture notes, 
-		
-		\begin{equation}
-			\lambda = \frac{2 \pi}{|\omega|}
-			\label{q4:eq:wavelength}
-		\end{equation}
-		
-		and 
-		
-		\begin{equation}
-			\omega = [\frac{2 \pi u}{N} \ \frac{2 \pi v}{N}]^T
-		\end{equation}
-		
-		Hence, equation \ref{q4:eq:wavelength} for $(u,v)=(p,q)$ becomes
-		
-		\begin{equation}
-			\lambda = \frac{N}{\sqrt{p^2+q^2}}
-		\end{equation}
-		
-		TODO: add figures
-		
-		
-	\section{Question 5}
-	
-		For an quadratic image of size $N$, the highest number of cycles that can fit in it is $N/2$. 
-		Hence, when either $p$ or $q$ exceed the value of $N/2$, which in our case is $N/2 = 64$, the Nyquist frequency is exceeded
-		and the corresponding waveform in the spatial domain is no longer a sinusoid.
-		
-		\begin{figure}[!htb]
-			\centering
-			\scalebox{.5}{\input{./images/Q5/q5_aliasing.tikz}}
-			\caption{Example waveform in the spatial domain for $(p,q)=(69,120)$}
-			\label{fig:}
-	  	\end{figure}
-	  	
-	
-	\section{Question 6}
-	
-		The purpose of these lines is to correctly map the angular frequency values $\omega_x$ and $\omega_y$ inside the interval
-		
-		\begin{equation}
-			-\frac{N}{2} \leq \omega_x, \omega_y \leq \frac{N}{2}
-		\end{equation}
+	\input{./sections/02.part_2}
 
 	
 
