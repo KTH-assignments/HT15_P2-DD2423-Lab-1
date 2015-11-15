@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[oneside,12pt]{article}
 \usepackage{fontspec}
 \setmainfont{CMU Serif}
 \defaultfontfeatures{Ligatures=TeX} % To support LaTeX quoting style
@@ -10,13 +10,14 @@
 %\usepackage[margin=1in]{geometry}
 \usepackage{float}
 
-
+\widowpenalty=1000
+\clubpenalty=1000
 \title{DD$2423$ - Lab I \\ Alexandros Filotheou}
 \date{}
 
 \begin{document}
 	\maketitle
-  
+
 	\input{./sections/01.part_1}
 	
 	\input{./sections/02.part_2}
