@@ -1,0 +1,37 @@
+\section{Section 1.5 - Multiplication}
+
+\subsection{Question 10}
+
+Images \texttt{F .* G} and $\mathcal{F}(\texttt{F .* G})$ are shown in figures \ref{fig:Q10_1} and \ref{fig:Q10_2} respectively.
+
+\begin{minipage}{\linewidth}
+  \centering
+  \begin{minipage}{0.25\linewidth}
+    \begin{figure}[H]
+      \scalebox{0.4}{\input{./images/Q10/q10_1.tex}}
+      \caption{Image \texttt{F .* G}.}
+      \label{fig:Q10_1}
+    \end{figure}
+  \end{minipage}
+  \hspace{0.05\linewidth}
+  \begin{minipage}{0.25\linewidth}
+    \begin{figure}[H]
+      \scalebox{0.4}{\input{./images/Q10/q10_2.tex}}
+      \caption{Image $\mathcal{F}(\texttt{F .* G})$.}
+      \label{fig:Q10_2}
+    \end{figure}
+  \end{minipage}
+    \hspace{0.05\linewidth}
+  \begin{minipage}{0.25\linewidth}
+    \begin{figure}[H]
+      \scalebox{0.4}{\input{./images/Q10/q10_3.tex}}
+      \caption{Image $\mathcal{F}(F) * \mathcal{F}(G)$.}
+      \label{fig:Q10_3}
+    \end{figure}
+  \end{minipage}
+\end{minipage}
+\\
+
+Since the multiplication in either the spatial or the frequency domain is translated into a convolution in the other, 
+the same result can be obtained by convolving the Fourier transforms of $F$ and $G$. The result of this operation is
+illustrated in figure \ref{fig:Q10_3}.

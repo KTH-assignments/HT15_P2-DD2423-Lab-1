@@ -1,0 +1,36 @@
+\section{Section 1.7 - Rotation}
+
+\subsection{Question 12}
+
+Figure \ref{fig:Q12} illustrates the effect of rotation of the original image to the spectra of the various images. The orientation of each spectrum
+follows the rotation of each image, i.e. it is rotated by the same angle and towards the same direction. However, because of the rotation, each
+image loses its original smoothness, due to the limited resolution and the nature of the shape of the pixels. This has a direct effect on the Fourier transform
+of each image, as is clearly seen by the wave-like patterns in the spectrum of the images rotated by $30$ and $60$ degrees.
+
+\begin{figure}
+	\centering
+	\input{./images/Q12/q12.tex}
+	\caption{The first row depicts the original $F$ image and its Fourier transform. The next images in the first column represent $F$ rotated by 
+	a) $30$, b) $45$, c) $60$ and d) $90$ degrees respectively. 
+	The second column features their respective Fourier transforms. The third column features the Fourier spectra of the second column
+	rotated, so as to match the orientation of the Fourier spectrum of image $F$.}
+	\label{fig:Q12}
+\end{figure}
+
+The rotation of the image can be seen as the rotation of a sum of pixels. If a pixel with coordinates $A(x,y)$ with respect
+to the center of the image is rotated by an angle $\theta$, then its new coordinates can be expressed as 
+$$A(x',y') = A(x cos\theta + ysin\theta, -x sin\theta + y cos\theta)$$
+Hence, $$x = x' cos\theta - y' sin\theta$$ and $$y = x' sin\theta + y' cos\theta$$
+
+If we now take the Fourier transform of the rotated image $f(x',y')$, then
+
+\begin{multline}
+\mathcal{F}(f') = \sum_{x=0}^{N-1} \sum_{y=0}^{N-1} f(x',y') \cdot e^{-\dfrac{2 \pi i (xu + yv)}{N}} = \\
+\sum_{x=0}^{N-1} \sum_{y=0}^{N-1} f(x',y') \cdot e^{-\dfrac{2 \pi i ((x' cos\theta - y' sin\theta)u + (x' sin\theta + y' cos\theta)v)}{N}} = \\
+\sum_{x=0}^{N-1} \sum_{y=0}^{N-1} f(x',y') \cdot e^{-\dfrac{2 \pi i (x' (u cos\theta + v sin\theta) + y' (v cos\theta -u sin\theta))}{N}} = \\
+\sum_{x'=0}^{N-1} \sum_{y'=0}^{N-1} f(x',y') \cdot e^{-\dfrac{2 \pi i (x' (u cos\theta + v sin\theta) + y' (v cos\theta -u sin\theta))}{N}}
+\end{multline}
+
+which means that the rotation is propagated to the frequency domain:
+
+$$u' = u cos\theta + v sin\theta$$ and $$v' = v cos\theta -u sin\theta$$

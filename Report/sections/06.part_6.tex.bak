@@ -1,0 +1,8 @@
+\section{Section 1.8 - Information in Fourier phase and magnitude}
+
+\begin{figure}
+	\input{./images/Q13/q13.tex}
+	\caption{Original images \texttt{phone128, few128, nallo128} at the first column. Their respective power spectrum transformations
+	\texttt{pow2image} are in the second column and \texttt{randphaseimage} in the third.}
+	\label{fig:Q13}
+\end{figure}

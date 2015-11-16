@@ -7,7 +7,7 @@
 \usepackage{graphicx}
 \usepackage{pgfplots}
 \usepackage{subcaption}
-%\usepackage[margin=1in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{float}
 
 \widowpenalty=1000
@@ -21,7 +21,20 @@
 	\input{./sections/01.part_1}
 	
 	\input{./sections/02.part_2}
+	
+	\input{./sections/03.part_3}
+	
+	\input{./sections/04.part_4}
+	
+	\input{./sections/05.part_5}
+	
+	\input{./sections/06.part_6}
 
+	\input{./sections/07.part_7}
+	
+	\input{./sections/08.part_8}
+	
+	\input{./sections/09.part_9}
 	
 
 \end{document}
