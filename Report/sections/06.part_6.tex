@@ -2,10 +2,29 @@
 
 \begin{figure}[H]
 	\input{./images/Q13/q13.tex}
-	\caption{The first column features the original images \texttt{phone128, few128, nallo128}. Their respective power spectrum transformations
-	\texttt{pow2image} and \texttt{randphaseimage} are in the second and third columns respectively.}
+	\caption{The first column features the original images \texttt{phone128, few128, nallo128}. Their respective power spectrum transformation
+	\texttt{pow2image} and phase transformation \texttt{randphaseimage} are in the second and third columns respectively.}
 	\label{fig:Q13}
 \end{figure}
 
 
-TODO
+\subsection{Question 13}
+
+Let us consider the one dimension, continuous case. A real signal can be expressed in the form of its inverse Fourier transform:
+
+\begin{multline}
+	x(t) = 	\int_{-\infty}^{\infty} X(\omega) e^{j\omega t} d \omega  = 
+			\int_{-\infty}^{\infty} |X(\omega)| e^{j \phi} e^{j \omega t} d \omega = 
+			\int_{-\infty}^{\infty} |X(\omega)| e^{j(\omega t + \phi)} d \omega
+$$			
+\label{eq:q13_fourier_decomp}
+\end{multline}
+
+where $X(\omega) = |X(\omega)| e^{j \phi}$$, with $$|X(\omega)|$ being the amplitude of the signal in the frequency domain, and $\phi$ its phase.
+Equation \ref{eq:q13_fourier_decomp} describes that the amplitude $|X(\omega)|$ is the weight for the contribution of the sinusoid $e^{j\omega t}$ to $x(t)$,
+while the $e^{j \phi}$ component determines the phase of this sinusoid with respect to other sinusoids in $x(t)$. 
+
+As seen in figure \ref{fig:Q13} the phase component is responsible for the information that humans can relate to,
+since the second column features images whose phase is the same as those of the original images. In contrast, the third column where the amplitude has been
+kept the same as that in the first column has no immediate visual information visible.
+

@@ -1,8 +1,26 @@
 \section{Section 1.8 - Information in Fourier phase and magnitude}
 
-\begin{figure}
+\begin{figure}[H]
 	\input{./images/Q13/q13.tex}
-	\caption{Original images \texttt{phone128, few128, nallo128} at the first column. Their respective power spectrum transformations
-	\texttt{pow2image} are in the second column and \texttt{randphaseimage} in the third.}
+	\caption{The first column features the original images \texttt{phone128, few128, nallo128}. Their respective power spectrum transformations
+	\texttt{pow2image} and \texttt{randphaseimage} are in the second and third columns respectively.}
 	\label{fig:Q13}
 \end{figure}
+
+
+\subsection{Question 13}
+
+Let us consider the one dimension, continuous case. A real signal can be expressed in the form of its inverse Fourier transform:
+
+\begin{multline}
+	x(t) = 	\int_{-\infty}^{\infty} X(\omega) e^{j\omega t} d \omega  = 
+			\int_{-\infty}^{\infty} |X(\omega)| e^{j \phi} e^{j \omega t} d \omega = 
+			\int_{-\infty}^{\infty} |X(\omega)| e^{j(\omega t + \phi)} d \omega
+$$			
+\label{eq:q13_fourier_decomp}
+\end{multline}
+
+where $X(\omega) = |X(\omega)| e^{j \phi}$$, with $$|X(\omega)|$ being the amplitude of the signal in the frequency domain, and $\phi$ its phase.
+Equation \ref{eq:q13_fourier_decomp} describes that the amplitude $|X(\omega)|$ is the weight for the contribution of the sinusoid $e^{j\omega t}$ to $x(t)$,
+while the $e^{j \phi}$ component 
+

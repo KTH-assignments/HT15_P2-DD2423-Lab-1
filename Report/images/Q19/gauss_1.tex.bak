@@ -1,0 +1,344 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(2.509in,5.695in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=256.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=256.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=256.5,ymin=0.5,ymax=256.5] {./images/Q19/gauss_1-1.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(2.509in,4.069in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=256.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=256.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=256.5,ymin=0.5,ymax=256.5] {./images/Q19/gauss_1-2.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(2.509in,2.443in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=256.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=256.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=256.5,ymin=0.5,ymax=256.5] {./images/Q19/gauss_1-3.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(2.509in,0.816in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=256.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=256.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=256.5,ymin=0.5,ymax=256.5] {./images/Q19/gauss_1-4.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(5.571in,5.695in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=128.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=128.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=128.5,ymin=0.5,ymax=128.5] {./images/Q19/gauss_1-5.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(5.571in,4.069in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=128.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=128.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=128.5,ymin=0.5,ymax=128.5] {./images/Q19/gauss_1-6.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(5.571in,2.443in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=128.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=128.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=128.5,ymin=0.5,ymax=128.5] {./images/Q19/gauss_1-7.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(5.571in,0.816in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=128.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=128.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=128.5,ymin=0.5,ymax=128.5] {./images/Q19/gauss_1-8.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(8.633in,5.695in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=64.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=64.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=64.5,ymin=0.5,ymax=64.5] {./images/Q19/gauss_1-9.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(8.633in,4.069in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=64.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=64.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=64.5,ymin=0.5,ymax=64.5] {./images/Q19/gauss_1-10.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(8.633in,2.443in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=64.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=64.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=64.5,ymin=0.5,ymax=64.5] {./images/Q19/gauss_1-11.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(8.633in,0.816in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=64.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=64.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=64.5,ymin=0.5,ymax=64.5] {./images/Q19/gauss_1-12.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(11.695in,5.695in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=32.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=32.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=32.5,ymin=0.5,ymax=32.5] {./images/Q19/gauss_1-13.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(11.695in,4.069in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=32.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=32.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=32.5,ymin=0.5,ymax=32.5] {./images/Q19/gauss_1-14.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(11.695in,2.443in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=32.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=32.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=32.5,ymin=0.5,ymax=32.5] {./images/Q19/gauss_1-15.png};
+\end{axis}
+
+\begin{axis}[%
+width=1.171in,
+height=1.171in,
+at={(11.695in,0.816in)},
+scale only axis,
+axis on top,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=32.5,
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+y dir=reverse,
+ymin=0.5,
+ymax=32.5,
+hide axis
+]
+\addplot [forget plot] graphics [xmin=0.5,xmax=32.5,ymin=0.5,ymax=32.5] {./images/Q19/gauss_1-16.png};
+\end{axis}
+\end{tikzpicture}%
