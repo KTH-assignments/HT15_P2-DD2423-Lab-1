@@ -45,7 +45,7 @@ illustrate image \texttt{hand256} subsampled and smoothed using a Gaussian and a
 \subsection{Question 19}
 
 Sub-sampling results in pixels of bigger size, hence a neighbourhood of pixels are compacted into one, and the different values of all those pixels are lost.
-Hence, information is lost and shapes become coarser. Is the sub-sampling occurs at a lower frequency than the Nyquist frequency then the image's 
+Hence, information is lost and shapes become coarser. If the sub-sampling occurs at a lower frequency than the Nyquist frequency then the image's 
 characteristics are distorted irrevocably.
 
 The first thing noticed in this exercise is that there is an qualitative information loss balance: it is possible to smooth the sub-sampled images to a higher degree 
@@ -53,27 +53,37 @@ than the original images. Smoothing the original images in that degree results i
 filters used here are low-pass filters, we can see that the outline of the hand in the image remains fairly accurate, even a higher variances, or lower cut-off
 frequencies. 
 
-
     \begin{figure}[H]
     	\centering
-		\scalebox{1}{\input{./images/Q19/q19_N4_gauss_5.tex}}
-      	\caption{The upper left figure shows image \texttt{hand256} subsampled $4$ times. The lower left figure shows its smoothed version
+		\scalebox{0.8}{\input{./images/Q19/q19_N4_gauss_5.tex}}
+      	\caption{The upper left figure shows image \texttt{hand256} sub-sampled $4$ times. The lower left figure shows its smoothed version
       	using a Gaussian filter with $t=5$. The figures on the right-hand side illustrate their corresponding spectra.}
       	\label{fig:Q19_N4_gauss_5}
     \end{figure}
     
      \begin{figure}[H]
     	\centering
-		\scalebox{1}{\input{./images/Q19/q19_N1_gauss_5.tex}}
-      	\caption{The uppermost figure shows image \texttt{hand256}. The left figure shows its smoothed version
-      	using a Gaussian filter with $t=100$. The figures on the right-hand side illustrate their corresponding spectra. Figure used for comparison with
-      	the above figure.}
-      	\label{fig:Q19_N4_gauss_100}
+		\scalebox{0.8}{\input{./images/Q19/q19_N1_gauss_5.tex}}
+      	\caption{The upper left figure shows image \texttt{hand256}. The lower left figure shows its smoothed version
+      	using a Gaussian filter with $t=5$. The figures on the right-hand side illustrate their corresponding spectra.}
+      	\label{fig:Q19_N1_gauss_5}
     \end{figure}
     
+   
+    
+Figure \ref{fig:Q19_N4_ideal_01} illustrates image \texttt{hand256} sub-sampled $4$ times, its smoothed variant using a Gaussian filter of variance $t=5$,
+and their corresponding spectra. Figure \ref{fig:Q19_N1_gauss_5} illustrates the original \texttt{hand256} image, its smoothed variant using the same
+settings as in figure \ref{fig:Q19_N4_gauss_5}, and their corresponding spectra.
+
+Figure \ref{fig:Q19_N4_ideal_01} illustrates image \texttt{hand256} sub-sampled $4$ times, its smoothed variant using an ideal low-pass filter with
+a cut-off frequency of $0.1$ cycles per pixel, and their corresponding spectra. 
+Figure \ref{fig:Q19_N1_ideal_01} illustrates the original \texttt{hand256} image, its smoothed variant using the same
+settings as in figure \ref{fig:Q19_N4_ideal_01}, and their corresponding spectra.
+
+
     \begin{figure}[H]
     	\centering
-		\scalebox{1}{\input{./images/Q19/q19_N4_ideal_01.tex}}
+		\scalebox{0.8}{\input{./images/Q19/q19_N4_ideal_01.tex}}
       	\caption{The upper left figure shows image \texttt{hand256} subsampled $4$ times. The lower left figure shows its smoothed version
       	using an ideal low-pass filter with $CUTOFF=0.1$. The figures on the right-hand side illustrate their corresponding spectra.}
       	\label{fig:Q19_N4_ideal_01}
@@ -81,10 +91,20 @@ frequencies.
     
     \begin{figure}[H]
     	\centering
-		\scalebox{1}{\input{./images/Q19/q19_N1_ideal_01.tex}}
-      	\caption{The upper left figure shows image \texttt{hand256} subsampled $4$ times. The lower left figure shows its smoothed version
-      	using an ideal low-pass filter with $CUTOFF=0.05$. The figures on the right-hand side illustrate their corresponding spectra. Figure used for comparison with
-      	the above figure.}
-      	\label{fig:Q19_N4_ideal_005}
+		\scalebox{0.8}{\input{./images/Q19/q19_N1_ideal_01.tex}}
+      	\caption{The upper left figure shows image \texttt{hand256}. The lower left figure shows its smoothed version
+      	using an ideal low-pass filter with $CUTOFF=0.1$. The figures on the right-hand side illustrate their corresponding spectra.}
+      	\label{fig:Q19_N1_ideal_01}
     \end{figure}
     
+    
+With regard to smoothing the sub-sampled versions of the original images, the same effects as in \textit{Question 17}: the Gaussian filter
+introduces blurring and the ideal low-pass filter introduces ringing. The higher the resolution of the image,
+the higher the level of details preserved with regard to blurring, and the coarser the ringing effect.
+
+
+\subsection{Question 20}
+
+Judging from the spectra of the $4$ figures above, it is evident that the smoothed versions of the original images contain much higher frequencies
+than their sub-sampled counterparts. This is reasonable since higher resolution can capture more sensitive details, meaning much higher frequencies.
+The spectra of the sub-sampled images are barely touched by the sub-sampling process with regard to these high frequencies.
