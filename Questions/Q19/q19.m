@@ -1,7 +1,7 @@
 function q19_out = q19(img, N, freq)
 
-  smoothimg = gaussfft_icc(img, freq);
-  %smoothimg = ideal(img, freq);
+  %smoothimg = gaussfft_icc(img, freq);
+  smoothimg = ideal(img, freq);
   for i=1:N
     if i>1
       % generate subsampled versions

@@ -1,232 +1,90 @@
-\section{Section 3 - Smoothing}
+\section{Section 3.2 - Smoothing and subsampling}
 
-\begin{minipage}{\linewidth}
-  \begin{minipage}{0.4\linewidth}
+Figures \ref{fig:Q19_ideal_05}, \ref{fig:Q19_ideal_06}, \ref{fig:Q19_gauss_1} and \ref{fig:Q19_gauss_1} 
+illustrate image \texttt{hand256} subsampled and smoothed using a Gaussian and an ideal low-pass filter.
+
+
     \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/add_original.eps}
-      \caption{Image \texttt{add}, i.e. image \texttt{office256} corrupted by white noise of $\sigma = 16$.}
-      \label{fig:Q17_add_original}
+    	\centering
+		\scalebox{1}{\input{./images/Q19/ideal_05.tex}}
+      	\caption{Image \texttt{hand256} subsampled $1,2,3$ and $4$ times are presented at row $1$ respectively. 
+      	Row $2$ illustrates their respective Fourier transforms. Row $3$ features the smoothed version of the images in row $1$ using the
+      	\texttt{ideal} operator with $CUTOFF=0.5$. Row $4$ illustrates the Fourier transform of the smoothed images.}
+      	\label{fig:Q19_ideal_05}
     \end{figure}
-  \end{minipage}
-  \hspace{0.05\linewidth}
-  \begin{minipage}{0.4\linewidth}
+    
     \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/sap_original.eps}
-      \caption{Image \texttt{sap}, i.e. \texttt{office256} corrupted by salt-and-pepper noise.}
-      \label{fig:Q17_add_original}
+    	\centering
+		\scalebox{1}{\input{./images/Q19/ideal_06.tex}}
+      	\caption{Image \texttt{hand256} subsampled $1,2,3$ and $4$ times are presented at row $1$ respectively. 
+      	Row $2$ illustrates their respective Fourier transforms. Row $3$ features the smoothed version of the images in row $1$ using the
+      	\texttt{ideal} operator with $CUTOFF=0.6$. Row $4$ illustrates the Fourier transform of the smoothed images.}
+      	\label{fig:Q19_ideal_06}
     \end{figure}
-  \end{minipage}
-\end{minipage}
-\\
-
-\subsection{Question 17}
-
-TODO
-
-\subsubsection{Gaussian smoothing}
-
-\begin{minipage}{\linewidth}
-  \begin{minipage}{0.4\linewidth}
+    
+    
     \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/discgaussfft/add_01.eps}
-      \caption{Smoothing of image \texttt{add} using a gaussian low pass filter of $\sigma^2 = 0.1$.}
-      \label{fig:Q17_discgaussfft_add_01}
+    	\centering
+		\scalebox{1}{\input{./images/Q19/gauss_1.tex}}
+      	\caption{Image \texttt{hand256} subsampled $1,2,3$ and $4$ times are presented at row $1$ respectively. 
+      	Row $2$ illustrates their respective Fourier transforms. Row $3$ features the smoothed version of the images in row $1$ using the
+      	\texttt{gaussfft} operator with $t=1$. Row $4$ illustrates the Fourier transform of the smoothed images.}
+      	\label{fig:Q19_gauss_1}
     \end{figure}
-  \end{minipage}
-  \hspace{0.05\linewidth}
-  \begin{minipage}{0.4\linewidth}
+    
     \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/discgaussfft/add_1.eps}
-      \caption{Smoothing of image \texttt{add} using a gaussian low pass filter of $\sigma^2 = 1$.}
-      \label{fig:Q17_discgaussfft_add_1}
+    	\centering
+		\scalebox{1}{\input{./images/Q19/gauss_07.tex}}
+      	\caption{Image \texttt{hand256} subsampled $1,2,3$ and $4$ times are presented at row $1$ respectively. 
+      	Row $2$ illustrates their respective Fourier transforms. Row $3$ features the smoothed version of the images in row $1$ using the
+      	\texttt{gaussfft} operator with $t=0.7$. Row $4$ illustrates the Fourier transform of the smoothed images.}
+      	\label{fig:Q19_gauss_07}
     \end{figure}
-  \end{minipage}
-\end{minipage}
-\\
+    
+    
+\subsection{Question 19}
 
-\begin{minipage}{\linewidth}
-  \begin{minipage}{0.4\linewidth}
+Sub-sampling results in pixels of bigger size, hence a neighbourhood of pixels are compacted into one, and the different values of all those pixels are lost.
+Hence, information is lost and shapes become coarser. Is the sub-sampling occurs at a lower frequency than the Nyquist frequency then the image's 
+characteristics are distorted irrevocably.
+
+The first thing noticed in this exercise is that there is an qualitative information loss balance: it is possible to smooth the sub-sampled images to a higher degree 
+than the original images. Smoothing the original images in that degree results in information loss, just as the one introduced when sub-sampling. Since the two
+filters used here are low-pass filters, we can see that the outline of the hand in the image remains fairly accurate, even a higher variances, or lower cut-off
+frequencies. 
+
+
     \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/discgaussfft/add_4.eps}
-      \caption{Smoothing of image \texttt{add} using a gaussian low pass filter of $\sigma^2 = 4$.}
-      \label{fig:Q17_discgaussfft_add_4}
+    	\centering
+		\scalebox{1}{\input{./images/Q19/q19_N4_gauss_5.tex}}
+      	\caption{The upper left figure shows image \texttt{hand256} subsampled $4$ times. The lower left figure shows its smoothed version
+      	using a Gaussian filter with $t=5$. The figures on the right-hand side illustrate their corresponding spectra.}
+      	\label{fig:Q19_N4_gauss_5}
     \end{figure}
-  \end{minipage}
-  \hspace{0.05\linewidth}
-  \begin{minipage}{0.4\linewidth}
+    
+     \begin{figure}[H]
+    	\centering
+		\scalebox{1}{\input{./images/Q19/q19_N1_gauss_5.tex}}
+      	\caption{The uppermost figure shows image \texttt{hand256}. The left figure shows its smoothed version
+      	using a Gaussian filter with $t=100$. The figures on the right-hand side illustrate their corresponding spectra. Figure used for comparison with
+      	the above figure.}
+      	\label{fig:Q19_N4_gauss_100}
+    \end{figure}
+    
     \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/discgaussfft/add_10.eps}
-      \caption{Smoothing of image \texttt{add} using a gaussian low pass filter of $\sigma^2 = 10$.}
-      \label{fig:Q17_discgaussfft_add_10}
+    	\centering
+		\scalebox{1}{\input{./images/Q19/q19_N4_ideal_01.tex}}
+      	\caption{The upper left figure shows image \texttt{hand256} subsampled $4$ times. The lower left figure shows its smoothed version
+      	using an ideal low-pass filter with $CUTOFF=0.1$. The figures on the right-hand side illustrate their corresponding spectra.}
+      	\label{fig:Q19_N4_ideal_01}
     \end{figure}
-  \end{minipage}
-\end{minipage}
-\\
-
-
-\begin{minipage}{\linewidth}
-  \begin{minipage}{0.4\linewidth}
+    
     \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/discgaussfft/sap_01.eps}
-      \caption{Smoothing of image \texttt{sap} using a gaussian low pass filter of $\sigma^2 = 0.1$.}
-      \label{fig:Q17_discgaussfft_sap_01}
+    	\centering
+		\scalebox{1}{\input{./images/Q19/q19_N1_ideal_01.tex}}
+      	\caption{The upper left figure shows image \texttt{hand256} subsampled $4$ times. The lower left figure shows its smoothed version
+      	using an ideal low-pass filter with $CUTOFF=0.05$. The figures on the right-hand side illustrate their corresponding spectra. Figure used for comparison with
+      	the above figure.}
+      	\label{fig:Q19_N4_ideal_005}
     \end{figure}
-  \end{minipage}
-  \hspace{0.05\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/discgaussfft/sap_1.eps}
-      \caption{Smoothing of image \texttt{sap} using a gaussian low pass filter of $\sigma^2 = 1$.}
-      \label{fig:Q17_discgaussfft_sap_1}
-    \end{figure}
-  \end{minipage}
-\end{minipage}
-\\
-
-\begin{minipage}{\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/discgaussfft/sap_4.eps}
-      \caption{Smoothing of image \texttt{sap} using a gaussian low pass filter of $\sigma^2 = 4$.}
-      \label{fig:Q17_discgaussfft_sap_4}
-    \end{figure}
-  \end{minipage}
-  \hspace{0.05\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/discgaussfft/sap_10.eps}
-      \caption{Smoothing of image \texttt{sap} using a gaussian low pass filter of $\sigma^2 = 10$.}
-      \label{fig:Q17_discgaussfft_sap_10}
-    \end{figure}
-  \end{minipage}
-\end{minipage}
-\\
-
-
-
-\subsubsection{Median filtering}
-
-\begin{minipage}{\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/medfilt/add_1.eps}
-      \caption{Smoothing of image \texttt{add} using a median filter of $size=1$.}
-      \label{fig:Q17_medfilt_add_1}
-    \end{figure}
-  \end{minipage}
-  \hspace{0.05\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/medfilt/add_4.eps}
-      \caption{Smoothing of image \texttt{add} using a median filter of $size=4$.}
-      \label{fig:Q17_medfilt_add_4}
-    \end{figure}
-  \end{minipage}
-\end{minipage}
-\\
-
-\begin{minipage}{\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/medfilt/add_10.eps}
-      \caption{Smoothing of image \texttt{add} using a median filter of $size=10$.}
-      \label{fig:Q17_medfilt_add_10}
-    \end{figure}
-  \end{minipage}
-  \hspace{0.05\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/medfilt/sap_1.eps}
-      \caption{Smoothing of image \texttt{sap} using a median filter of $size=1$.}
-      \label{fig:Q17_medfilt_sap_1}
-    \end{figure}
-  \end{minipage}
-\end{minipage}
-\\
-
-
-\begin{minipage}{\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/medfilt/sap_4.eps}
-      \caption{Smoothing of image \texttt{sap} using a median filter of $size=4$.}
-      \label{fig:Q17_medfilt_sap_4}
-    \end{figure}
-  \end{minipage}
-  \hspace{0.05\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.6]{./images/Q17/medfilt/sap_10.eps}
-      \caption{Smoothing of image \texttt{sap} using a median filter of $size=10$.}
-      \label{fig:Q17_medfilt_sap_10}
-    \end{figure}
-  \end{minipage}
-\end{minipage}
-\\
-
-
-
-\subsubsection{Ideal low-pass filtering}
-
-\begin{minipage}{\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.5]{./images/Q17/ideal/add_01.eps}
-      \caption{Smoothing of image \texttt{add} using an ideal low-pass filter with cut-off frequency of $0.1$ cycles per pixel.}
-      \label{fig:Q17_ideal_add_01}
-    \end{figure}
-  \end{minipage}
-  \hspace{0.05\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.5]{./images/Q17/ideal/add_02.eps}
-      \caption{Smoothing of image \texttt{add} using an ideal low-pass filter with cut-off frequency of $0.4$ cycles per pixel.}
-      \label{fig:Q17_ideal_add_02}
-    \end{figure}
-  \end{minipage}
-\end{minipage}
-\\
-
-\begin{minipage}{\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.5]{./images/Q17/ideal/add_005.eps}
-      \caption{Smoothing of image \texttt{add} using an ideal low-pass filter with cut-off frequency of $0.05$ cycles per pixel.}
-      \label{fig:Q17_ideal_add_005}
-    \end{figure}
-  \end{minipage}
-  \hspace{0.05\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.5]{./images/Q17/ideal/sap_01.eps}
-      \caption{Smoothing of image \texttt{sap} using an ideal low-pass filter with cut-off frequency of $0.11$ cycles per pixel.}
-      \label{fig:Q17_ideal_sap_01}
-    \end{figure}
-  \end{minipage}
-\end{minipage}
-\\
-
-
-\begin{minipage}{\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.5]{./images/Q17/ideal/sap_02.eps}
-      \caption{Smoothing of image \texttt{sap} using an ideal low-pass filter with cut-off frequency of $0.2$ cycles per pixel.}
-      \label{fig:Q17_ideal_sap_02}
-    \end{figure}
-  \end{minipage}
-  \hspace{0.05\linewidth}
-  \begin{minipage}{0.4\linewidth}
-    \begin{figure}[H]
-      \includegraphics[scale=0.5]{./images/Q17/ideal/sap_005.eps}
-      \caption{Smoothing of image \texttt{sap} using an ideal low-pass filter with cut-off frequency of $0.05$ cycles per pixel.}
-      \label{fig:Q17_ideal_sap_005}
-    \end{figure}
-  \end{minipage}
-\end{minipage}
-\\
-
-
-\subsection{Question 18}
-
-TODO
+    
